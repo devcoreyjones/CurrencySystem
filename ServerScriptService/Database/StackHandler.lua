@@ -119,7 +119,8 @@ Functionality:
 	Sets the self object to nil.
 ]]
 function StackHandler:Destroy()
-	self = nil
+	table.clear(self)
+	setmetatable(self, nil)
 end
 
 return StackHandler
